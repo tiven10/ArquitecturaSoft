@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastAPI RPG</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>FastAPI RPG</h1>
+
+    <div class="container">
+        <!-- Sección de Creación de Jugadores -->
+        <div id="player-creation" class="section">
+            <h2>Crear Jugador</h2>
+            <input type="text" id="player-name" placeholder="Nombre del Jugador">
+            <select id="player-role">
+                <option value="Guerrero">Guerrero</option>
+                <option value="Mago">Mago</option>
+                <option value="Arquero">Arquero</option>
+                <option value="Escudero">Escudero</option>
+                <option value="Asesino">Asesino</option>
+                <option value="Paladin">Paladín</option>
+            </select>
+            <button id="create-player-btn">Crear Jugador</button>
+            <h3>Jugadores Creados:</h3>
+            <ul id="player-list"></ul>
+        </div>
+
+        <!-- Sección de Combate -->
+        <div id="combat-section" class="section">
+            <h2>Iniciar Combate</h2>
+            <div class="combat-setup">
+                <select id="player1-select"></select>
+                <span>VS</span>
+                <select id="player2-select"></select>
+            </div>
+            <button id="start-combat-btn">¡Iniciar Batalla!</button>
+            
+            <div id="combat-zone" class="hidden">
+                <h3 id="turn-info"></h3>
+                <div id="action-buttons">
+                    <button id="attack-fisico-btn">Ataque Físico</button>
+                    <button id="attack-magico-btn">Hechizo de Fuego</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Log del Juego -->
+    <div class="log-section">
+        <h2>Log del Juego</h2>
+        <pre id="game-log"></pre>
+    </div>
+
+    <script src="/static/main.js"></script>
+</body>
+</html>
