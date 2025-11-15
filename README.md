@@ -1,29 +1,32 @@
-# Proyecto FastAPI con Docker
+# FastAPI RPG Battle Simulator
 
-Este es un proyecto de ejemplo de una API con FastAPI y Docker.
+Un simple juego de rol por turnos construido con FastAPI para el backend y HTML/JavaScript/CSS puro para el frontend.
 
-## Cómo ejecutar localmente
+## Características
 
-1.  Instalar dependencias:
+*   Crea jugadores con diferentes profesiones (Guerrero, Mago, Paladín, etc.).
+*   Sistema de combate por turnos con ataques únicos por profesión.
+*   Variabilidad en el daño, críticos y fallos.
+*   Coste de maná para habilidades especiales.
+*   Sistema de experiencia y subida de nivel.
+*   Interfaz web interactiva para jugar.
+*   Totalmente contenedorizado con Docker.
 
+## Autores
+
+*   **Maury Alexander Maturana Lozano**
+*   **Brian Steven Albornoz**
+*   **Steven Munoz Vargas**
+
+## Cómo Ejecutar
+
+1.  Asegúrate de tener Docker instalado y en ejecución.
+2.  Construye la imagen de Docker:
     ```bash
-    python -m pip install -r requirements.txt
+    docker build -t fastapi-rpg-app .
     ```
-
-2.  Ejecutar la aplicación:
-
+3.  Ejecuta el contenedor:
     ```bash
-    uvicorn app.main:app --reload --port 8000
+    docker run --rm -d -p 8000:8000 --name rpg-api-container fastapi-rpg-app
     ```
-
-## Cómo construir la imagen de Docker
-
-```bash
-docker build -t juego-api:latest .
-```
-
-## Cómo correr la imagen de Docker
-
-```bash
-docker run -p 8000:8000 juego-api:latest
-```
+4.  Abre tu navegador y ve a `http://localhost:8000`.

@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FastAPI RPG</title>
+    <title>FastAPI RPG - M. Maturana, B. Albornoz, S. Munoz</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <h1>FastAPI RPG</h1>
-
     <div class="container">
+        <h1>FastAPI RPG Battle Simulator</h1>
+
         <!-- Sección de Creación de Jugadores -->
         <div id="player-creation" class="section">
             <h2>Crear Jugador</h2>
@@ -28,30 +28,31 @@
         </div>
 
         <!-- Sección de Combate -->
-        <div id="combat-section" class="section">
+        <div id="combat-setup" class="section">
             <h2>Iniciar Combate</h2>
-            <div class="combat-setup">
-                <select id="player1-select"></select>
-                <span>VS</span>
-                <select id="player2-select"></select>
-            </div>
+            <select id="player1-select"></select>
+            <span>VS</span>
+            <select id="player2-select"></select>
             <button id="start-combat-btn">¡Iniciar Batalla!</button>
-            
-            <div id="combat-zone" class="hidden">
-                <h3 id="turn-info"></h3>
-                <div id="action-buttons">
-                    <button id="attack-fisico-btn">Ataque Físico</button>
-                    <button id="attack-magico-btn">Hechizo de Fuego</button>
-                </div>
-            </div>
+        </div>
+
+        <!-- Zona de Batalla (inicialmente oculta) -->
+        <div id="combat-zone" class="section hidden">
+            <h2 id="turn-info">Turno de: --</h2>
+            <p>Selecciona una acción:</p>
+            <div id="action-buttons"></div>
+        </div>
+
+        <!-- Log del Juego -->
+        <div id="game-log-container" class="section">
+            <h2>Log del Juego</h2>
+            <pre id="game-log"></pre>
         </div>
     </div>
 
-    <!-- Log del Juego -->
-    <div class="log-section">
-        <h2>Log del Juego</h2>
-        <pre id="game-log"></pre>
-    </div>
+    <footer>
+        <p>Desarrollado por: Maury Alexander Maturana Lozano, Brian Steven Albornoz, Steven Munoz Vargas</p>
+    </footer>
 
     <script src="/static/main.js"></script>
 </body>

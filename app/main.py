@@ -3,10 +3,20 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from app.routers import players, combat
 
+# Metadata para la documentación de la API
+description = """
+Una API simple para un juego de rol por turnos. 🚀
+
+### Autores:
+*   **Maury Alexander Maturana Lozano**
+*   **Brian Steven Albornoz**
+*   **Steven Munoz Vargas**
+"""
+
 app = FastAPI(
-    title="Juego API",
-    description="Una API simple para un juego de rol.",
-    version="0.2.0" # Versión con Front-End
+    title="FastAPI RPG API",
+    description=description,
+    version="1.0.0"
 )
 
 # Montar el directorio 'static' para servir archivos HTML, CSS, JS
