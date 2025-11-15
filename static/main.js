@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (result) {
             state.combat = {
                 combat_id: result.combat_id,
-                attacker_name: result.message[1].split(' ')[3].replace('.', '')
+                attacker_name: result.message[1].split(' ')[4].replace('.', '')
             };
             log(result.message);
             updateCombatUI();
