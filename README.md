@@ -7,7 +7,7 @@ Este es un proyecto de ejemplo de una API con FastAPI y Docker.
 1.  Instalar dependencias:
 
     ```bash
-    python -m pip install fastapi uvicorn
+    python -m pip install -r requirements.txt
     ```
 
 2.  Ejecutar la aplicación:
